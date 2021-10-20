@@ -49,6 +49,8 @@
 		};
 
 		csvData.forEach(function (row, rowIndex) {
+			if (config.hasOwnProperty("skipLines") && rowIndex < config.skipLines) return;
+
 			const columnData = {};
 
 			// fields are mismatch

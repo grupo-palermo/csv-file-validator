@@ -47,6 +47,7 @@ export interface ParsedResults<Row = any, Error = string> {
 export interface ValidatorConfig {
 	headers: FieldSchema[];
 	isHeaderNameOptional?: boolean;
+	skipLines?: number;
 }
 
 export default function CSVFileValidator<Row = any, Error = string>(
